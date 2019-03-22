@@ -58,7 +58,6 @@ public class DES {
 		for (int i = 16; i >= 1; i--) {
 			L[i - 1] = xor(R[i], DESUtil.f(L[i], K[i - 1]));
 			R[i - 1] = L[i];
-			R[i] = xor(L[i - 1], DESUtil.f(R[i - 1], K[i - 1]));
 		}
 		//以L0为左半部分，R0为右半部分合并
 		for (int i = 0; i < 32; i++) {
